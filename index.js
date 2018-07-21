@@ -1,5 +1,5 @@
 // IMPORTANT, Do not hurt the next line. It's configured from solved.sh 
-const LATEST_PROBLEM = 3;
+const LATEST_PROBLEM = 4;
 
 const main = () => {
     if (process.argv && process.argv[2]) {
