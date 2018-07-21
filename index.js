@@ -2,11 +2,11 @@ const LATEST_PROBLEM = 2; // This must be updated every time a new problem is so
 
 const main = () => {
     if (process.argv && process.argv[2]) {
-        resultOutput(process.argv[2], require(`./solutions/${process.argv[2]}`)());
+        resultWrapper(process.argv[2], `./solutions/${process.argv[2]}`);
     } else {
         for (let i = 1; i <= LATEST_PROBLEM; i++) {
             try {
-                resultOutput(i, require(`./solutions/${i}`)());
+                resultWrapper(i, `./solutions/${i}`);
             } catch (error) {
                 if (error.message !== `Cannot find module './solutions/${i}'`) {
                     console.log(error);
@@ -19,8 +19,11 @@ const main = () => {
     }
 }
 
-const resultOutput = (i, sol) => {
-    console.log(`~ Solution for problem ${i} is: ${sol}`);
+const resultWrapper = (i, path) => {
+    let t1 = Date.now();
+    let sol = require(path)();
+    let t2 = Date.now();
+    console.log(`~ Solution for problem ${i} is: ${sol}. (${((t2 - t1) / 1000).toFixed(5)}s)`);
 }
 
 main();
