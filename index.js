@@ -1,4 +1,4 @@
-const LATEST_PROBLEM = 2; // This must be updated every time a new problem is solved.
+const LATEST_PROBLEM = 2;
 
 const main = () => {
     if (process.argv && process.argv[2]) {
@@ -23,7 +23,7 @@ const resultWrapper = (i, path) => {
     let t1 = Date.now();
     let sol = require(path)();
     let t2 = Date.now();
-    console.log(`~ Solution for problem ${i} is: ${sol}. (${((t2 - t1) / 1000).toFixed(5)}s)`);
+    console.log(`~ Solution for problem ${i} is: ${sol}. (${((t2 - t1) / 1000).toFixed(6)}s)`);
 }
 
 main();
