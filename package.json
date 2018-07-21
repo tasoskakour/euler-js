@@ -1,0 +1,21 @@
+{
+  "name": "euler-js",
+  "version": "1.0.0",
+  "description": "Project Euler mathematical solutions in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "solution": "node index.js $SOLUTION",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tasoskakour/euler-js.git"
+  },
+  "author": "Tasos Kakouris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tasoskakour/euler-js/issues"
+  },
+  "homepage": "https://github.com/tasoskakour/euler-js#readme"
+}
