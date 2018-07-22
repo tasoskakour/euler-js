@@ -25,5 +25,8 @@ module.exports = {
             }
         }
         return ret;
+    },
+    factorial: (n) => {
+        return [...Array(n).keys()].map(v => v + 1).reduce((a, b) => a * b, 1);
     }
 }
