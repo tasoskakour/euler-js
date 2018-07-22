@@ -1,12 +1,9 @@
 module.exports = {
     isPrime: (num) => {
         if (num <= 5) {
-            return true;
+            return num !== 4 && num !== 1;
         }
-        if (num % 2 === 0 || (String(num))[String(num).length - 1] === '5') {
-            return false;
-        }
-        for (let i = 2; i < num; i++) {
+        for (let i = 2, sq = Math.sqrt(num); i <= sq; i++) {
             if (num % i === 0) {
                 return false;
             }
