@@ -12,5 +12,18 @@ module.exports = {
     },
     isPalindrome: (str) => {
         return str === str.split('').reverse().join('');
+    },
+    getDivisors: (num) => {
+        if (num === 1) { return [1]; }
+        let ret = [1, num];
+        let stop = num;
+        for (let i = 2; i < stop; i++) {
+            if (num % i === 0) {
+                ret.push(i);
+                ret.push(num / i);
+                stop = num / i;
+            }
+        }
+        return ret;
     }
 }
