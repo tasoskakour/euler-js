@@ -13,15 +13,22 @@ module.exports = {
     isPalindrome: (str) => {
         return str === str.split('').reverse().join('');
     },
-    getDivisors: (num) => {
+    getDivisors: (num, properDivisors = false) => {
+        let ret = [];
+        ret.push(1);
+        if (properDivisors === false) {
+            ret.push(num);
+        }
         if (num === 1) { return [1]; }
-        let ret = [1, num];
         let stop = num;
         for (let i = 2; i < stop; i++) {
             if (num % i === 0) {
                 ret.push(i);
-                ret.push(num / i);
-                stop = num / i;
+                let _n = num / i
+                if (_n !== i) {
+                    ret.push(_n);
+                }
+                stop = _n;
             }
         }
         return ret;
