@@ -47,13 +47,11 @@ module.exports = {
     },
     sumWithDigits: (..._numDigits) => {
         let ret = [];
-
         let numDigits = [..._numDigits];
         let maxDigits = Math.max(...numDigits.map(nD => nD.length));
         numDigits = numDigits.map((nD) => {
             return nD.length < maxDigits ? Array(maxDigits - nD.length).fill(0).concat(nD) : nD;
         })
-
         let carry = 0;
         for (let i = maxDigits - 1; i >= 0; i--) {
             let sum = numDigits.map(nD => nD[i]).reduce((a, b) => a + b, 0) + carry;
