@@ -12,9 +12,6 @@ module.exports = () => {
             continue;
         }
         let _a = getBaseLog(ab.a, a);
-        if (powersVisited[ab.a] === undefined) {
-            powersVisited[ab.a] = { powers: [] };
-        }
         for (let b = 2 * (ab.b + 1); b <= ab.b * N; b += _a) {
             if (!powersVisited[ab.a].powers.includes(b)) {
                 powersVisited[ab.a].powers.push(b);
@@ -22,6 +19,5 @@ module.exports = () => {
             }
         }
     }
-    // console.log(powersVisited)
-    return count;
+    return count - 1;
 }
