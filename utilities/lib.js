@@ -67,5 +67,22 @@ module.exports = {
             ret.unshift(...String(carry).split('').map(s => Number(s)))
         }
         return ret;
+    },
+    isPerfectPower: (num) => {
+        let N = Math.floor(Math.sqrt(num));
+        for (let a = 2; a <= N; a++) {
+            for (let b = 2; ; b++) {
+                let pow = Math.pow(a, b);
+                if (pow === num) {
+                    return { a, b };
+                } else if (pow > num) {
+                    break;
+                }
+            }
+        }
+        return false;
+    },
+    getBaseLog: (x, y) => {
+        return Math.log(y) / Math.log(x);
     }
 }
