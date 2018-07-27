@@ -84,5 +84,13 @@ module.exports = {
     },
     getBaseLog: (x, y) => {
         return Math.log(y) / Math.log(x);
+    },
+    isStringUnique: (str) => {
+        for (let i = 0; i < str.length - 1; i++) {
+            if (str.substring(i + 1).indexOf(str[i]) !== -1) {
+                return false;
+            }
+        }
+        return true;
     }
 }
