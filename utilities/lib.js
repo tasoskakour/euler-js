@@ -1,4 +1,4 @@
-module.exports = {
+const self = module.exports = {
     isPrime: (num) => {
         if (num <= 5) {
             return num !== 4 && num !== 1;
@@ -92,5 +92,15 @@ module.exports = {
             }
         }
         return true;
+    },
+    fractionLowestcommonTerms: (a, b) => { // a/b -> with a<b (TODO: if a>b)
+        let aD = self.getDivisors(a).sort((x, y) => y - x);
+        let bD = self.getDivisors(b).sort((x, y) => y - x);
+        for (let i = 0; i < aD.length; i++) {
+            let index = bD.indexOf(aD[i]);
+            if (index !== -1) {
+                return { a: a / bD[index], b: b / bD[index] };
+            }
+        }
     }
 }
