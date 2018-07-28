@@ -109,5 +109,16 @@ const self = module.exports = {
                 return divisorsD[index];
             }
         }
+    },
+    getDigitsRotations: (num) => {
+        let ret = [num];
+        let str = String(num).split('');
+        let N = str.length;
+        for (let i = 0; i < N - 1; i++) {
+            let tmp = str.shift();
+            str.push(tmp);
+            ret.push(Number(str.join('')));
+        }
+        return ret;
     }
 }
