@@ -3,7 +3,6 @@ module.exports = () => {
     let sum = 0;
     for (n = 32; n <= N; n++) {
         if (String(n).split('').reduce((a, b) => a + Math.pow(Number(b), 5), 0) === n) {
-            console.log(n);
             sum += n;
         }
     }
