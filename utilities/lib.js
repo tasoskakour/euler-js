@@ -93,13 +93,19 @@ const self = module.exports = {
         }
         return true;
     },
-    fractionLowestcommonTerms: (a, b) => { // a/b -> with a<b (TODO: if a>b)
-        let aD = self.getDivisors(a).sort((x, y) => y - x);
-        let bD = self.getDivisors(b).sort((x, y) => y - x);
-        for (let i = 0; i < aD.length; i++) {
-            let index = bD.indexOf(aD[i]);
+    maximumCommonDivider: (a, b) => {
+        let c = a;
+        let d = b;
+        if (a < b) {
+            c = b;
+            d = a;
+        }
+        let divisorsC = self.getDivisors(c).sort((x, y) => y - x);
+        let divisorsD = self.getDivisors(d).sort((x, y) => y - x);
+        for (let i = 0; i < divisorsC.length; i++) {
+            let index = divisorsD.indexOf(divisorsC[i]);
             if (index !== -1) {
-                return { a: a / bD[index], b: b / bD[index] };
+                return divisorsD[index];
             }
         }
     }

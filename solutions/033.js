@@ -1,4 +1,4 @@
-const fractionLowestcommonTerms = require('../utilities/lib').fractionLowestcommonTerms;
+const maximumCommonDivider = require('../utilities/lib').maximumCommonDivider;
 
 module.exports = () => {
     let fraction = { a: 1, b: 1 };
@@ -23,7 +23,7 @@ module.exports = () => {
             break;
         }
     }
-    return fractionLowestcommonTerms(fraction.a, fraction.b).b;
+    return fraction.b / maximumCommonDivider(fraction.a, fraction.b);
 }
 
 const cancelDigits = (num1, num2) => {
