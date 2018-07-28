@@ -34,6 +34,7 @@ const self = module.exports = {
         return ret;
     },
     factorial: (n) => {
+        if (n === 0) { return 1; }
         return [...Array(n).keys()].map(v => v + 1).reduce((a, b) => a * b, 1);
     },
     wordNumbers: {
