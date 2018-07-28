@@ -1,3 +1,7 @@
+/*
+    Problem 31 - Coin sums
+    https://projecteuler.net/problem=31
+*/
 module.exports = () => {
     const max = 200;
     let count = 0;

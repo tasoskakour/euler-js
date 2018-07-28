@@ -1,3 +1,7 @@
+/*
+    Problem 32 - Pandigital products
+    https://projecteuler.net/problem=32
+*/
 const isStringUnique = require('../utilities/lib').isStringUnique;
 
 module.exports = () => {

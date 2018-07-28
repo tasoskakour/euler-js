@@ -1,3 +1,7 @@
+/*
+    Problem 27 - Quadratic primes
+    https://projecteuler.net/problem=27
+*/
 const isPrime = require('../utilities/lib').isPrime;
 
 module.exports = () => {

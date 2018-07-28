@@ -1,3 +1,7 @@
+/*
+    Problem 14 - Longest Collatz sequence
+    https://projecteuler.net/problem=14
+*/
 module.exports = () => {
     let maxChain = 1; maxStartNum = 3;
     for (n = 3; n < 1e6; n++) {

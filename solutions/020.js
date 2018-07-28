@@ -1,3 +1,7 @@
+/*
+    Problem 20 - Factorial digit sum
+    https://projecteuler.net/problem=20
+*/
 module.exports = () => {
     let digits = [1];
     for (let i = 2; i <= 100; i++) {

@@ -1,3 +1,7 @@
+/*
+    Problem 26 - Reciprocal cycles
+    https://projecteuler.net/problem=26
+*/
 module.exports = () => {
     let maxLen = 0; let d = 0;
     for (let i = 1000; i >= 2; i--) {

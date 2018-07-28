@@ -1,3 +1,7 @@
+/*
+    Problem 21 - Amicable numbers
+    https://projecteuler.net/problem=21
+*/
 const getDivisors = require('../utilities/lib').getDivisors;
 
 module.exports = () => {

@@ -1,3 +1,7 @@
+/*
+    Problem 33 - Digit cancelling fractions
+    https://projecteuler.net/problem=33
+*/
 const maximumCommonDivider = require('../utilities/lib').maximumCommonDivider;
 
 module.exports = () => {

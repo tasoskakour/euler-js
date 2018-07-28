@@ -1,3 +1,7 @@
+/*
+    Problem 22 - Names scores
+    https://projecteuler.net/problem=22
+*/
 const fs = require('fs');
 const path = require('path');
 

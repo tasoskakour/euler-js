@@ -1,3 +1,7 @@
+/*
+    Problem 17 - Number letter counts
+    https://projecteuler.net/problem=17
+*/
 const wordNumbers = require('../utilities/lib').wordNumbers;
 
 module.exports = () => {

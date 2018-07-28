@@ -1,3 +1,7 @@
+/*
+    Problem 12 - Highly divisible triangular number
+    https://projecteuler.net/problem=12
+*/
 const getDivisors = require('../utilities/lib').getDivisors;
 
 module.exports = () => {

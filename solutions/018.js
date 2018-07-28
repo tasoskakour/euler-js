@@ -1,3 +1,7 @@
+/*
+    Problem 18 - Maximum path sum I
+    https://projecteuler.net/problem=18
+*/
 module.exports = () => {
     const cost = [
         [75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

@@ -1,3 +1,7 @@
+/*
+    Problem 23 - Non-abundant sums
+    https://projecteuler.net/problem=23
+*/
 const getDivisors = require('../utilities/lib').getDivisors
 
 module.exports = () => {

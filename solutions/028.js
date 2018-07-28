@@ -1,3 +1,7 @@
+/*
+    Problem 28 - Number spiral diagonals
+    https://projecteuler.net/problem=28
+*/
 module.exports = () => {
     let N = 1001;
     let spiral = Array(N).fill().map(() => Array(N).fill())

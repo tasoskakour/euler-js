@@ -1,3 +1,7 @@
+/*
+    Problem 30 - Digit fifth powers
+    https://projecteuler.net/problem=30
+*/
 module.exports = () => {
     let N = Array(7).fill(Math.pow(9, 5)).reduce((a, b) => a + b, 0); // 7*9^5 << 9999999
     let sum = 0;

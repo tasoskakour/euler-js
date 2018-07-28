@@ -1,3 +1,7 @@
+/*
+    Problem 16 - Power digit sum
+    https://projecteuler.net/problem=16
+*/
 module.exports = () => {
     let digits = [2];
     for (let n = 1; n < 1000; n++) {

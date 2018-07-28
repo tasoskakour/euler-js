@@ -1,3 +1,7 @@
+/*
+    Problem 24 - Lexicographic permutations
+    https://projecteuler.net/problem=24
+*/
 const arraySwap = require('../utilities/lib').arraySwap;
 
 // https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order

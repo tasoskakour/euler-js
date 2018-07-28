@@ -1,3 +1,7 @@
+/*
+    Problem 3 - Largest prime factor
+    https://projecteuler.net/problem=3
+*/
 const isPrime = require('../utilities/lib').isPrime;
 const bigNumber = 600851475143;
 

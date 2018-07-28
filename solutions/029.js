@@ -1,3 +1,7 @@
+/*
+    Problem 29 - Distinct powers
+    https://projecteuler.net/problem=29
+*/
 const isPerfectPower = require('../utilities/lib').isPerfectPower;
 const getBaseLog = require('../utilities/lib').getBaseLog;
 

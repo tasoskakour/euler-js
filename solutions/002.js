@@ -1,3 +1,7 @@
+/*
+    Problem 2 - Even Fibonacci numbers
+    https://projecteuler.net/problem=2
+*/
 module.exports = () => {
     let fiboSequence = [1, 2]; let i = 1;
     while (true) {
