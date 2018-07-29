@@ -120,5 +120,30 @@ const self = module.exports = {
             ret.push(Number(str.join('')));
         }
         return ret;
+    },
+    getLexicographicPermutations: (array) => {
+        let ret = [[...array]];
+        let permutation = [...array];
+        while (true) {
+            let kMax = -1;
+            for (let k = 0; k < permutation.length - 1; k++) {
+                if (permutation[k] < permutation[k + 1] && k > kMax) {
+                    kMax = k;
+                }
+            }
+            if (kMax === -1) {
+                return ret;
+            }
+            let lMax = -1;
+            for (l = kMax + 1; l < permutation.length; l++) {
+                if (permutation[kMax] < permutation[l] && l > lMax) {
+                    lMax = l;
+                }
+            }
+            self.arraySwap(permutation, kMax, lMax);
+            let r = permutation.slice(kMax + 1).reverse();
+            permutation = permutation.slice(0, kMax + 1).concat(r);
+            ret.push([...permutation]);
+        }
     }
 }
