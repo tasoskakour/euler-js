@@ -145,5 +145,23 @@ const self = module.exports = {
             permutation = permutation.slice(0, kMax + 1).concat(r);
             ret.push([...permutation]);
         }
+    },
+    getTriangleNumber: (n) => {
+        return n * (n + 1) / 2
+    },
+    isTriangleNumber: (num) => {
+        return (-1 + Math.sqrt(1 + 8 * num)) % 2 === 0;
+    },
+    getPentagonalNumber: (n) => {
+        return n * (3 * n - 1) / 2
+    },
+    isPentagonalNumber: (num) => {
+        return (1 + Math.sqrt(1 + 24 * num)) % 6 === 0;
+    },
+    getHexagonalNumber: (n) => {
+        return n * (2 * n - 1);
+    },
+    isHexagonalNumber: (num) => {
+        return (1 + Math.sqrt(1 + 8 * num)) % 4 === 0;
     }
 }
