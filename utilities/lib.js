@@ -146,6 +146,25 @@ const self = module.exports = {
             ret.push([...permutation]);
         }
     },
+    isPermutations: (n, m) => {
+        let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let temp = n;
+        while (temp > 0) {
+            arr[temp % 10]++;
+            temp = Math.floor(temp / 10);
+        }
+        temp = m;
+        while (temp > 0) {
+            arr[temp % 10]--;
+            temp = Math.floor(temp / 10);
+        }
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    },
     getTriangleNumber: (n) => {
         return n * (n + 1) / 2
     },
