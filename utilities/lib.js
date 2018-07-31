@@ -182,5 +182,19 @@ const self = module.exports = {
     },
     isHexagonalNumber: (num) => {
         return (1 + Math.sqrt(1 + 8 * num)) % 4 === 0;
+    },
+    getBinomialCoeff: (n, r) => {
+        let diff = n - r;
+        let f1 = 1; let f2 = 1;
+        if (r > diff) {
+            for (let i = r + 1; i <= n; i++)
+                f1 *= i;
+            f2 = self.factorial(n - r)
+        } else {
+            for (let i = (n - r + 1); i <= n; i++)
+                f1 *= i;
+            f2 = self.factorial(r)
+        }
+        return f1 / f2;
     }
 }
