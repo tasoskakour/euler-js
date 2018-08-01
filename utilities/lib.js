@@ -69,6 +69,24 @@ const self = module.exports = {
         }
         return ret;
     },
+    mulDigitsWithNum: (numDigits, multiplier) => {
+        let carry = 0;
+        let ret = [];
+        for (let d = numDigits.length - 1; d >= 0; d--) {
+            let mul = numDigits[d] * multiplier + carry;
+            if (mul >= 10) {
+                carry = Math.floor(mul / 10);
+                mul -= 10 * carry;
+            } else {
+                carry = 0;
+            }
+            ret.unshift(mul);
+        }
+        if (carry !== 0) {
+            ret.unshift(...String(carry).split('').map(v => Number(v)));
+        }
+        return ret;
+    },
     isPerfectPower: (num) => {
         let N = Math.floor(Math.sqrt(num));
         for (let a = 2; a <= N; a++) {
