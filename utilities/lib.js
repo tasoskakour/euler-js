@@ -189,6 +189,12 @@ const self = module.exports = {
     isTriangleNumber: (num) => {
         return (-1 + Math.sqrt(1 + 8 * num)) % 2 === 0;
     },
+    getSquareNumber: (n) => {
+        return Math.pow(n, 2);
+    },
+    isSquareNumber: (num) => {
+        return Math.sqrt(num) % 1 === 0;
+    },
     getPentagonalNumber: (n) => {
         return n * (3 * n - 1) / 2
     },
@@ -200,6 +206,18 @@ const self = module.exports = {
     },
     isHexagonalNumber: (num) => {
         return (1 + Math.sqrt(1 + 8 * num)) % 4 === 0;
+    },
+    getHeptagonalNumber: (n) => {
+        return n * (5 * n - 3) / 2;
+    },
+    isHeptagonalNumber: (num) => {
+        return (3 + Math.sqrt(9 + 40 * num)) % 10 === 0;
+    },
+    getOctagonalNumber: (n) => {
+        return n * (3 * n - 2);
+    },
+    isOctagonalNumber: (num) => {
+        return (2 + Math.sqrt(4 + 12 * num)) % 6 === 0;
     },
     getBinomialCoeff: (n, r) => {
         let diff = n - r;
@@ -214,5 +232,15 @@ const self = module.exports = {
             f2 = self.factorial(r)
         }
         return f1 / f2;
+    },
+    arraysEqual: (arr1, arr2) => {
+        if (arr1.length !== arr2.length) {
+            return false;
+        }
+        for (let i = arr1.length; i--;) {
+            if (arr1[i] !== arr2[i])
+                return false;
+        }
+        return true;
     }
 }
