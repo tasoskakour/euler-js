@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tasoskakour/euler-js/issues"
   },
-  "homepage": "https://github.com/tasoskakour/euler-js#readme"
+  "homepage": "https://github.com/tasoskakour/euler-js#readme",
+  "dependencies": {
+    "big-integer": "^1.6.34"
+  }
 }
