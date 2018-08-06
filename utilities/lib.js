@@ -10,6 +10,23 @@ const self = module.exports = {
         }
         return true;
     },
+    generatePrimes: (lowerBound, { length, upperBound } = {}) => {
+        let ret = [];
+        let type = length ? 1 : 2
+        let n = lowerBound;
+        while (true) {
+            if (type === 1 && ret.length >= length) {
+                break;
+            } else if (type === 2 && n >= upperBound) {
+                break;
+            }
+            if (self.isPrime(n)) {
+                ret.push(n)
+            }
+            n++;
+        }
+        return ret;
+    },
     isPalindrome: (str) => {
         return str === str.split('').reverse().join('');
     },
